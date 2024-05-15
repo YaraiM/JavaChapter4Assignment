@@ -38,4 +38,8 @@ public class Employee {
     public int promotionScore() {
         return (int) this.yearsOfExperience + this.qualification.getPoint();
     }
+
+    public int qualificationPoint() {
+        return (int) this.qualification.getPoint();
+    }
 }

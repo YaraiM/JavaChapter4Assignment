@@ -80,7 +80,7 @@ public class Promotion {
 
                     // promotionListの情報を表示
                     System.out.println("<" + promotionList.get(0).getDepartment().getDepartment() + ">");
-                    for (Employee i : promotionList) {
+                    for (Employee e : promotionList) {
                         System.out.println("氏名：" + i.getName() + "　経験年数：" + i.getYearsOfExperience() + "年" + "　資格点（資格名）：" + i.getQualification().getPoint() + "点（" + i.getQualification().getQualification() + "）" + "　昇進点：" + i.promotionScore() + "点");
                     }
 

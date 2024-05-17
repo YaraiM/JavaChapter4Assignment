@@ -71,7 +71,7 @@ public class Promotion {
                 if (inputCode < 1 || inputCode > 4) {
                     throw new IllegalArgumentException("部署コード以外は入力できません!");
                 } else {
-                    List<Employee> promotionList = employeeList.stream()
+                    List<Employee> promotingEmployees = employeeList.stream()
                             .filter(employee -> employee.getDepartment().getCode() == inputCode)
                             .sorted(Comparator.comparingInt(Employee::promotionScore) //昇進点を昇順に並び替える
                                     .thenComparingInt(Employee::getYearsOfExperience) //年齢を昇順に並び替える

@@ -78,10 +78,10 @@ public class Promotion {
                                     .thenComparingInt(Employee::qualificationPoint).reversed()) //資格点を昇順に並び替え、降順に入れ替える
                             .toList();
 
-                    // promotionListの情報を表示
-                    System.out.println("<" + promotionList.get(0).getDepartment().getDepartment() + ">");
-                    for (Employee e : promotionList) {
-                        System.out.println("氏名：" + i.getName() + "　経験年数：" + i.getYearsOfExperience() + "年" + "　資格点（資格名）：" + i.getQualification().getPoint() + "点（" + i.getQualification().getQualification() + "）" + "　昇進点：" + i.promotionScore() + "点");
+                    // promotingEmployeesの情報を表示
+                    System.out.println("<" + promotingEmployees.get(0).getDepartment().getDepartment() + ">");
+                    for (Employee e : promotingEmployees) {
+                        System.out.println("氏名：" + e.getName() + "　経験年数：" + e.getYearsOfExperience() + "年" + "　資格点（資格名）：" + e.getQualification().getPoint() + "点（" + e.getQualification().getQualification() + "）" + "　昇進点：" + e.promotionScore() + "点");
                     }
 
                     while (true) {
@@ -98,7 +98,7 @@ public class Promotion {
                             scanner.nextLine(); //入力後の改行をクリア
 
                             if (inputYesNo == 1) {
-                                System.out.println("昇進する従業員は、" + promotionList.get(0).getName() + "です。");
+                                System.out.println("昇進する従業員は、" + promotingEmployees.get(0).getName() + "です。");
                                 System.out.println("※昇進点（経験年数＋資格点）が最も高い人を昇進させます。");
                                 System.out.println("※昇進点が同点の場合は、経験年数が長い人を昇進させます。経験年数も同じであれば、資格点が高い人を昇進させます");
                                 break;

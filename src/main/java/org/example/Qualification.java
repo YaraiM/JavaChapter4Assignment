@@ -1,6 +1,8 @@
 package org.example;
 
-// 資格クラス（資格コード、資格名、資格ポイント）
+/**
+ * 資格クラス（資格コード, 資格名, 資格ポイント）
+ */
 public class Qualification {
     private int code;
     private String qualification;

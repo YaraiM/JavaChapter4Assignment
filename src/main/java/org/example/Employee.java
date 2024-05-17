@@ -1,5 +1,8 @@
 package org.example;
 
+/**
+ * 従業員クラス（従業員ID, 氏名, 経験年数, 部署, 保有資格）
+ */
 public class Employee {
     private int id;
     private String name;

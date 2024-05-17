@@ -1,6 +1,8 @@
 package org.example;
 
-// 部署クラス（部署コード、部署名）
+/**
+ *  部署クラス（部署コード、部署名）
+**/
 public class Department {
     private int code;
     private String department;
